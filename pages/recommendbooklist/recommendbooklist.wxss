@@ -1,0 +1,77 @@
+.recommend-book-list .major-type {
+  display: flex;
+  position: sticky;
+  padding-bottom: 5px;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+.recommend-book-list .major-type .type-item {
+  flex: 1;
+  text-align: center;
+  height: 30px;
+  line-height: 15px;
+  color: rgb(116, 114, 107);
+}
+
+.recommend-book-list .type-item.selected {
+  color: rgb(185, 51, 33);
+}
+
+.recommend-book-list .list-box {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.recommend-book-list .list-item {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.recommend-book-list .cover {
+  display: block;
+  width: 20%;
+  height: 100px;
+  margin-right: 10px;
+  float: left;
+}
+
+.recommend-book-list .info {
+  width:75%;
+  float: left;
+}
+
+.recommend-book-list .info text {
+  display: block;
+  width: 100%;
+  height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.recommend-book-list .other text{
+  display: inline-block;
+  width:auto;
+}
+.recommend-book-list .info .title {
+  color: rgb(61, 61, 60);
+  font-weight: 600;
+}
+.recommend-book-list .info .author,.recommend-book-list .info .desc{
+  color: rgb(153, 153, 153);
+  font-size: 13px;
+}
+
+.recommend-book-list .other{
+  display: inline-block;
+  color: rgb(102, 102, 102);
+  font-size: 14px;
+}
+
+.recommend-book-list .loading{
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}

@@ -1,0 +1,38 @@
+<view class="recommend-book-list-detail">
+  <view class='base-info'>
+    <view class='author-info'>
+      <image class='author-avatar' src="{{'http://statics.zhuishushenqi.com'+bookList.author.avatar}}"></image>
+      <view class='author-other'>
+        <view class='author-name'>{{bookList.author.nickname}}</view>
+        <view class='author-update-time'>{{bookList.updated}}前</view>
+      </view>
+    </view>
+    <view class='title'>{{bookList.title}}</view>
+    <view class='desc'>{{bookList.desc}}</view>
+  </view>
+  <view class='divide'></view>
+  <view class='book-list'>
+    <view 
+      wx:for="{{bookList.books}}"
+      wx:for-item="bookItem"
+      wx:for-index="bookIndex"
+      wx:key="bookIndex"
+      class='book-list-item'
+      data-id="{{bookItem.book._id}}"
+      bindtap='toBookDetail'
+    >
+      <view class='book-base-info'>
+        <image src="{{'http://statics.zhuishushenqi.com'+bookItem.book.cover}}" class='cover'></image>
+        <view class='book-info'>
+            <view class='book-title'>{{bookItem.book.title}}</view>
+            <view class='book-other'>
+              <text class='book-author'>{{bookItem.book.author}} |</text>
+              <text class='book-cate'>{{bookItem.book.minorCate}} |</text>
+              <text class='book-follower'>{{bookItem.book.latelyFollower}}</text>人气
+            </view>
+        </view>
+      </view>
+      <view class='comment'>{{bookItem.comment}}</view>
+    </view>
+  </view>
+</view>

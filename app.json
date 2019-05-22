@@ -1,0 +1,45 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/rank/rank",
+    "pages/booklist/booklist",
+    "pages/bookdetail/bookdetail",
+    "pages/comment/comment",
+    "pages/catalog/catalog",
+    "pages/chapterdetail/chapterdetail",
+    "pages/rankingdetail/rankingdetail",
+    "pages/searchresult/searchresult",
+    "pages/recommendbooklist/recommendbooklist",
+    "pages/recommendbooklistdetail/recommendbooklistdetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#8B7765",
+    "navigationBarTitleText": "JNovels",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  },
+  "tabBar":{
+    "custom": true,
+    "color":"white",
+    "selectedColor":"rgb(69, 69, 69)",
+    "backgroundColor":"rgb(51, 51, 51)",
+    "position": "bottom",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"首页"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "排行榜"
+      }
+    ]
+  }
+  
+}

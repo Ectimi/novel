@@ -1,0 +1,54 @@
+@import "../../utils/font.wxss";
+page,.catalog{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.catalog .title{
+  padding-left: 15px;
+  box-sizing: border-box;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  position: relative;
+}
+
+.catalog .count{
+  color:rgb(154, 154, 154);
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.catalog .reverse-order{
+  position: absolute;
+  right:20px;
+  top:0;
+}
+
+.catalog .chapter-item{
+  position: relative;
+  padding-left: 15px;
+  min-height: 30px;
+  line-height: 30px;
+  margin:5px;
+  color:rgb(154, 154, 154);
+}
+.catalog .chapter-item .icon{
+  position: absolute;
+  right:5px;
+  top:0;
+}
+.catalog .chapter-item .index{
+  margin-right: 10px;
+}
+
+.catalog .loading{
+  position: absolute;
+  width:100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  top:50%;
+  transform: translateY(-50%);
+  color: rgb(154, 154, 154);
+}

@@ -1,0 +1,102 @@
+.list-component .scroll-box{
+  overflow: hidden;
+  white-space: nowrap;
+}
+.list-component  .filter-item{
+  width:100%;
+  height: 35px;
+  line-height: 13px;
+}
+
+
+.list-component  .filter-item text{
+  display: inline-block;
+  width:22%;
+  height: 100%;
+  text-align: center;
+  color: rgb(128, 128, 128);
+}
+
+.list-component  .filter-item .selected{
+  color: rgb(203, 102, 89);
+}
+
+.list-component  .rank{
+  width:100%;
+  overflow: hidden;
+}
+
+.list-component .rank text{
+  display: block;
+  text-align: center;
+  width:30%;
+  margin:0 1.6%;
+  float: left;
+}
+
+.list-component .list-wrapper .list-item{
+  display: flex;
+  height: 100px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.list-component .list-item .cover{
+  flex: 0 0 80px;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.list-component .list-item .detail{
+  flex: 1;
+  height: 100%;
+  width:calc(100% - 100px);
+}
+
+.list-component .detail text{
+  display: block;
+}
+
+.list-component .detail .book-name{
+ font-weight: 600;
+}
+
+.list-component .detail .author{
+  display: inline-block;
+  color:rgb(154, 154, 154);
+}
+
+.list-component .detail .type{
+  display: inline-block;
+  color:rgb(154, 154, 154);
+}
+
+.list-component .detail .describe{
+  height: 21px;
+  width:100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color:rgb(154, 154, 154);
+}
+
+.list-component .detail .follower{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.list-component .detail .count,.list-component .detail .retention{
+  display: inline-block;
+  color: rgb(185, 51, 33);
+  margin-right: 3px;
+}
+.list-component .detail .text{
+  display: inline-block;
+  color: rgb(145, 144, 143);
+}
+
+.author,.type,.describe,.follower,.retention,.text{
+  font-size: 13px;
+  line-height: 20px;
+}

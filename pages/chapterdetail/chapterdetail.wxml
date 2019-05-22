@@ -1,0 +1,56 @@
+<view class='chapter-detail' >
+  <view class='box {{theme}}' wx:for="{{textArr}}" wx:key="index" catchtap='showMask'>
+    <view class='title' style="font-size:{{titleFontSize}}px">{{item.title}}</view>
+      <view class='content' style='font-size:{{contentFontSize}}px'>
+        <text class='text'>{{item.text}}</text>
+      </view>
+  </view>
+  <view class='loading' wx:if="{{loading}}">正在加载...</view>
+  <view class='flex-box'>
+     <view class='scroll-box'>
+     <scroll-view 
+      class='catalog-scroll' 
+      scroll-y
+      style="height:100%"
+      animation="{{catalogAniData}}"
+    >
+        <text class='book-name'>{{bookName}}</text>
+        <text class='title' >目录</text>
+        <text 
+          class="chapter-text {{index==currentPos?'current':''}}"
+          wx:for="{{catalogList}}" 
+          wx:key="index"
+          data-index="{{index}}"
+          bindtap='selectChapter'
+        >
+          {{index+1}}-{{item.title}}
+          <text class="iconfont icon {{item.isVip?'icon-lock':''}}"></text>
+        </text>
+      
+    </scroll-view>
+  </view>
+  </view>
+ 
+  <view class='mask' animation="{{animationData}}" catchtap='showMask'>
+    <view class='add-shelf'>加入书架</view>
+    <view class='layer-box'>
+      <view class='layer layer-one'>
+        <view class='font-sub btn' bindtap='setFontSize' data-type="sub">Aa-</view>
+        <view class='line'>
+          <view class='progress' style="width:{{progressWidth}}%"></view>
+        </view>
+        <view class='font-add btn' bindtap='setFontSize' data-type="add">Aa+</view>
+      </view>
+      <view class='layer layer-two'>
+        <view class='default-btn {{selected==0?"selected":""}}' data-type='0' bindtap='changeTheme'>默认</view>
+        <view class='night-btn {{selected==1?"selected":""}}' data-type='1' bindtap='changeTheme'>夜间</view>
+        <view class='protect-btn {{selected==2?"selected":""}}' data-type='2' bindtap='changeTheme'>护眼</view>
+      </view>
+      <view class='layer layer-three'>
+        <view class='pre' data-type="pre" bindtap='turnPage'>上一章</view>
+        <view class='catalog' catchtap='showCatalog'>目录</view>
+        <view class='next' data-type="next" bindtap='turnPage'>下一章</view>
+      </view>
+    </view>
+  </view>
+</view>

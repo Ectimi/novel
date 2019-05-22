@@ -1,0 +1,4 @@
+<view class="search-result">
+  <view class='title'>跟‘{{keyword}}’有关的书籍</view>
+  <list-component bookLists="{{searchResult}}"></list-component>
+</view>

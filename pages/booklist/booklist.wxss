@@ -1,0 +1,109 @@
+.booklist .word{
+  width:100%;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: rgb(185, 51, 33);
+  color: white;
+  font-weight: 500;
+}
+.booklist .filter-wrapper{
+  width:100%;
+  /* margin-bottom: 10px; */
+}
+.booklist .filter-wrapper .scroll-box{
+  overflow: hidden;
+  white-space: nowrap;
+}
+.booklist .filter-item{
+  width:100%;
+  height: 35px;
+  line-height: 13px;
+}
+
+.booklist .filter-item text{
+  display: inline-block;
+  width:22%;
+  height: 100%;
+  text-align: center;
+  color: rgb(128, 128, 128);
+}
+
+.booklist .filter-item .selected{
+  color: rgb(203, 102, 89);
+}
+
+.booklist .list-wrapper .list-item{
+  display: flex;
+  height: 100px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.booklist .list-item .cover{
+  flex: 0 0 80px;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.booklist .list-item .detail{
+  flex: 1;
+  height: 100%;
+  width:calc(100% - 100px);
+}
+
+.booklist .detail text{
+  display: block;
+}
+
+.booklist .detail .book-name{
+ font-weight: 600;
+}
+
+.booklist .detail .author{
+  display: inline-block;
+  color:rgb(154, 154, 154);
+}
+
+.booklist .detail .type{
+  display: inline-block;
+  color:rgb(154, 154, 154);
+}
+
+.booklist .detail .describe{
+  height: 21px;
+  width:100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color:rgb(154, 154, 154);
+}
+
+.booklist .detail .follower{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.booklist .detail .count,.booklist .detail .retention{
+  display: inline-block;
+  color: rgb(185, 51, 33);
+  margin-right: 3px;
+}
+.booklist .detail .text{
+  display: inline-block;
+  color: rgb(145, 144, 143);
+}
+
+.author,.type,.describe,.follower,.retention,.text{
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.booklist .loading{
+  width:100%;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  color: rgb(154, 154, 154);
+}

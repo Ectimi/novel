@@ -1,0 +1,20 @@
+<view class='rank'>
+  <view class='major'>
+    <block wx:for="{{major}}" wx:key="index"  wx:for-item="item" wx:key="index">
+      <view class='major-name'>{{item}}</view>
+      <view class='rank-list'>
+        <view 
+          class='rank-item' 
+          wx:for="{{rankList[index]}}"  
+          wx:for-item="itemName" 
+          wx:key="index" 
+          bindtap='toRankingDetail'
+          data-id="{{itemName._id}}"
+        >
+          <image class='img' src='{{"http://statics.zhuishushenqi.com"+itemName.cover}}'></image>
+          <view class='title'>{{itemName.title}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

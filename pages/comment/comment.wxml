@@ -1,0 +1,25 @@
+<view class="comment">
+  <text class='title'>{{title}}</text>
+  <view class='comment-list'>
+    <view class='comment-item' wx:for="{{commentInfo.reviews}}" wx:key="index">
+      <image class='avatar' src="{{item.author.avatar}}"></image>
+      <view class='info'>
+        <text class='author'>{{item.author.nickname}}</text>
+        <text class='comment-title'>{{item.title}}</text>
+        <view class='rating'>
+          <text 
+            wx:for="{{5}}" 
+            wx:for-item="val" 
+            wx:for-index="ind" 
+            wx:key="ind" 
+            class='iconfont icon-starton icon-start {{ind<item.rating?"orange":""}}'
+          >
+          </text>
+        </view>
+        <text class='content'>{{item.content}}</text>
+        <!-- <text class='time'></text>
+        <text class='help'>{{item.likeCount}}人觉得有用</text> -->
+      </view>
+    </view>
+  </view>
+</view>

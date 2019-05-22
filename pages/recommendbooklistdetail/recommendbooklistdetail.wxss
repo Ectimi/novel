@@ -1,0 +1,94 @@
+.recommend-book-list-detail {
+  font-size: 14px;
+}
+
+.recommend-book-list-detail .base-info {
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.recommend-book-list-detail .author-info {
+  overflow: hidden;
+}
+
+.recommend-book-list-detail .author-avatar {
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  float: left;
+}
+
+.recommend-book-list-detail .author-other {
+  float: left;
+}
+
+.recommend-book-list-detail .author-name {
+  font-size: 14px;
+  color: rgb(171, 148, 115);
+}
+
+.recommend-book-list-detail .author-update-time {
+  color: rgb(166, 179, 183);
+  font-size: 12px;
+}
+
+.recommend-book-list-detail .base-info .title {
+  margin: 10px 0;
+  color: rgb(34, 34, 34);
+}
+
+.recommend-book-list-detail .base-info .desc {
+  margin: 10px 0;
+  color: rgb(163, 153, 153);
+}
+
+.recommend-book-list-detail .divide {
+  height: 10px;
+  background-color: rgb(245, 242, 237);
+}
+
+.recommend-book-list-detail .book-list-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(204, 204, 204);
+  padding: 15px;
+  box-sizing: border-box;
+}
+.recommend-book-list-detail .book-list-item:last-of-type{
+  border:0;
+}
+.recommend-book-list-detail .book-list-item .book-base-info {
+  overflow: hidden;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.recommend-book-list-detail .book-list-item .cover {
+  display: block;
+  width: 45px;
+  height: 55px;
+  float: left;
+}
+
+.recommend-book-list-detail .book-info {
+  float: left;
+  margin-left: 10px;
+}
+
+.recommend-book-list-detail .book-info .book-title {
+  color: rgb(34, 34, 34);
+}
+
+.recommend-book-list-detail .book-info .book-other{
+  margin-top:5px;
+  color: rgb(153, 153, 153);
+}
+
+.recommend-book-list-detail .book-info .book-follower{
+  color: rgb(185, 51, 33);
+}
+
+.recommend-book-list-detail .comment{
+  margin:15px 0;
+  color: rgb(153, 153, 153);
+}

@@ -1,0 +1,234 @@
+@import '../../utils/common.wxss';
+@import '../../utils/font.wxss';
+
+.book-detail .title {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(185, 51, 33);
+  color: white;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+}
+
+.book-detail .content {
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.book-detail .content::after {
+  content: '';
+  height: 0;
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+.book-detail .book-info {
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+.book-detail .book-info .cover {
+  display: block;
+  flex: 0 0 80px;
+  height: 100%;
+}
+
+.book-detail .book-info .info {
+  margin-left: 10px;
+  display: block;
+  flex: 1;
+  font-size: 12px;
+}
+
+.book-detail .info .book-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.book-detail .info .author {
+  display: inline-block;
+  color: rgb(185, 51, 33);
+}
+
+.book-detail .info .type, .book-detail .info .count {
+  margin: 0 5px;
+  display: inline-block;
+  color: rgb(188, 188, 188);
+}
+
+.book-detail .info .update-time {
+  margin-top: 10px;
+}
+
+.book-detail .btn {
+  width: 40%;
+  height: 40px;
+  margin-top: 10px;
+  line-height: 40px;
+  float: left;
+}
+
+.book-detail .add-btn {
+  border: 1px solid rgb(200, 95, 81);
+  color: rgb(200, 95, 81);
+  margin-left: 5%;
+}
+
+.book-detail .read-btn {
+  background-color: rgb(185, 51, 33);
+  color: white;
+  font-weight: 600;
+  margin-left: 10%;
+}
+
+.book-detail .info-box {
+  margin: 20px 0;
+  display: flex;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.book-detail .info-box .info-item {
+  flex: 1;
+}
+
+.book-detail .info-item text {
+  display: block;
+  text-align: center;
+}
+
+.book-detail .info-item text:first-of-type {
+  font-size: 14px;
+  color: rgb(157, 157, 157);
+}
+
+.book-detail .info-item text:last-of-type {
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.book-detail .book-describe {
+  position: relative;
+  font-size: 14px;
+  padding: 15px;
+}
+
+.book-detail .hide {
+  height: 75px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.book-detail .book-describe .icon {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+  display: block;
+  font-size: 14px;
+  color: rgb(90, 89, 102);
+}
+
+.book-detail .catalog{
+  position: relative;
+  margin-top: 20px;
+  padding:0 15px;
+  color:rgb(34, 34, 34);
+  box-sizing: border-box;
+}
+.book-detail .catalog text{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  font-weight: 600;
+}
+.book-detail .catalog .chapter{
+  width:80%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgb(161, 161, 161);
+  margin-left: 10%;
+  font-size: 13px;
+}
+
+.book-detail .catalog .icon{
+  position: absolute;
+  right:5px;
+  top:0;
+  color:rgb(161, 161, 161);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.book-detail .comment{
+  margin-top: 20px;
+  padding:0 15px;
+  box-sizing: border-box;
+  position: relative;
+  font-weight: 600;
+  color:rgb(34, 34, 34);
+}
+
+.book-detail .comment .icon{
+  position: absolute;
+  right:5px;
+  top:0;
+  color: rgb(161, 161, 161);
+  font-size: 20px;
+}
+
+.book-detail .divide-line{
+  width:100%;
+  height: 5px;
+  background-color: rgb(244, 244, 244);
+  margin-top: 20px;
+}
+
+.book-detail .maybe{
+  width: 100%;
+  height: 30px;
+  padding-left: 20px;
+  border-left: 3px solid rgb(185, 51, 33);
+  box-sizing: border-box;
+  line-height: 30px;
+  font-size: 14px;
+  color:rgb(34, 34, 34);
+  font-weight: 600;
+}
+
+.book-detail .recommend-list{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.book-detail .recommend-list .recommend-item{
+  width: 30%;
+  float: left;
+  margin: 5px 1.5%;
+}
+
+.book-detail .recommend-item .cover{
+  display: block;
+  width:100%;
+  height: 130px;
+}
+
+.book-detail .recommend-item .book-title{
+  display: block;
+  width:100%;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 3px;
+  font-size: 14px;
+  color:rgb(51, 51, 51);
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

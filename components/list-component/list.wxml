@@ -1,0 +1,43 @@
+ <view class='list-component'>
+    <view class="scroll-box ">
+      <scroll-view scroll-x class="filter-item {{rankType.length>0?'rank':''}}">
+        <text 
+          wx:for="{{bookType.length>0?bookType:rankType}}" 
+          wx:for-index="idx"
+          wx:for-item="itemName"
+          wx:key="itemName" 
+          class="{{idx==typeSelected?'selected':''}}"
+          data-type="{{itemName}}"
+          data-index="{{idx}}"
+          bindtap='selectType'
+        >
+        {{itemName}}
+        </text>
+      </scroll-view>
+    </view>
+    <view class='list-wrapper'>
+      <view 
+        class='list-item' 
+        wx:for="{{bookLists}}" 
+        wx:for-item="value" 
+        wx:key="book-index" 
+        data-id="{{value._id}}"
+        bindtap='toBookDetail'
+      >
+        <image class='cover' src="{{value.cover}}"></image>
+        <view class='detail'>
+          <text class='book-name'>{{value.title}}</text>
+          <text class='author'>{{value.author}} | </text>
+          <text class='type'>{{value.majorCate}}</text>
+          <text class='describe'>{{value.shortIntro}}</text>
+          <text class='follower'>
+            <text class='count'>{{value.latelyFollower}}</text>
+            <text class='text'>人气 |</text>
+          </text>
+          <text class='retention'>{{' '+value.retentionRatio+"%"}}</text>
+          <text class='text'>读者留存</text>
+        </view>
+      </view>
+    </view>
+ </view>
+ 

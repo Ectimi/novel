@@ -1,0 +1,8 @@
+.search-result .title{
+  height: 30px;
+  line-height: 30px;
+  background-color: rgb(185, 51, 33);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}

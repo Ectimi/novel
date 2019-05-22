@@ -1,0 +1,89 @@
+<view class='book-detail'>
+  <view class='title'>书籍详情</view>
+  <view class='content'>
+    <view class='book-info'>
+      <image class='cover' src="{{bookInfo.cover}}"></image>
+      <view class='info'>
+        <view class='book-name'>{{bookInfo.title}}</view>
+        <view class='other'>
+          <text class='author'>{{bookInfo.author}}</text>
+          <text class='type'>| {{bookInfo.minorCate}} |</text>
+          <text class='count'> {{bookInfo.wordCount}}万字</text>
+        </view>
+        <view class='update-time'>{{bookInfo.updated}}前更新</view>
+      </view>
+    </view>
+    <button
+      class='btn add-btn'
+      type="default"
+      size="{{defaultSize}}"
+      loading="{{loading}}"
+      plain="{{plain}}"
+      disabled="{{disabled}}"
+      bindtap="default"
+      hover-class="other-button-hover"
+    >
+      加入书架
+    </button>
+    <button
+      class='btn read-btn'
+      type="default"
+      size="{{defaultSize}}"
+      loading="{{loading}}"
+      plain="{{plain}}"
+      disabled="{{disabled}}"
+      bindtap="toCatalog"
+      hover-class="other-button-hover"
+    >
+      开始阅读
+    </button>
+  </view>
+  <view class='line'></view>
+  <view class='info-box'>
+    <view class='info-item'>
+      <text class='text'>追人气</text>
+      <text class='follower-count'>{{bookInfo.latelyFollower}}</text>
+    </view>
+    <view class='info-item'>
+      <text class='text'>读者留存率</text>
+      <text class='ratio'>{{bookInfo.retentionRatio+'%'}}</text>
+    </view>
+    <view class='info-item'>
+      <text class='text'>日更字数/天</text>
+      <text class='word-count'>{{bookInfo.serializeWordCount}}</text>
+    </view>
+  </view>
+  <view class='line'></view>
+  <view class='book-describe {{hideText?"hide":""}}'>
+    {{bookInfo.longIntro}}
+    <text 
+      class='iconfont icon {{hideText?"icon-arrow-down":"icon-arrow-up"}}' 
+      bindtap='showAll'>
+    </text>
+  </view>
+  <view class='catalog' bindtap='toCatalog'>
+    <text class='catalog-text'>目录</text>
+    <text class='chapter'>[{{bookInfo.updated}}前更新] {{lastChapter}}</text>
+    <text class='iconfont icon-arrow-right icon' ></text>
+  </view>
+  <view class='comment' bindtap='toComment'>
+    <text class='text'>查看评论</text>
+    <text class='iconfont icon-arrow-right icon'></text>
+  </view>
+  <view class='divide-line'></view>
+  <view class='maybe'>你可能感兴趣</view>
+  <view class='recommend-list clearfix'>
+    <view 
+      class='recommend-item' 
+      wx:for="{{recommend}}"
+      wx:for-index="index"
+      wx:for-item="item"
+      wx:key="index"
+      data-id="item._id"
+      bindtap='setId'
+    >
+      <image class='cover' src="{{item.cover}}"></image>
+      <text class='book-title'>{{item.title}}</text>
+    </view>
+  </view>
+</view>

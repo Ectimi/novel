@@ -1,0 +1,25 @@
+<view class="catalog">
+  <view wx:if="{{load}}" class="loading">加载中...</view>
+  <view wx:else>
+    <view class='title'>目录
+      <text class='count'>共{{chapterNum}}章</text>
+      <text class='reverse-order' bindtap='sort'>{{sortType % 2 == 0 ?"倒序":"升序"}}</text>
+    </view>
+    <view class='chapter-list'>
+      <view 
+        class='chapter-item' 
+        wx:for="{{chapterList}}" 
+        wx:key="index" 
+        data-link="{{item.link}}" 
+        data-index="{{index}}"
+        bindtap='toChapterDetail'
+        data-vip="{{item.isVip}}"
+      >
+        <text class='index'>{{index+1}}</text>
+        <text>{{item.title}}</text>
+        <text class="iconfont icon {{item.isVip?'icon-lock':''}} "></text>
+      </view>
+    </view>
+  </view>
+  
+</view>

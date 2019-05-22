@@ -1,0 +1,20 @@
+<view class="booklist">
+  <view class='word'>{{word}}</view>
+  <view class='filter-wrapper'>
+    <view class='scroll-box'>
+      <scroll-view scroll-x class='filter-item'>
+        <text 
+          wx:for="{{classification}}" 
+          wx:for-index="index"
+          wx:for-item="item"
+          wx:key="index"
+          class="{{index==classSelected?'selected':''}}"
+        >
+        {{item}}
+        </text>
+      </scroll-view>
+    </view>
+  </view>
+  <list-component start="{{start}}" bookType="{{bookType}}" bookLists="{{bookLists}}" bind:setType="setType" bind:loadBooks="loadBooks" ></list-component>
+  <view class='loading' wx:if="{{isLoading}}">加载中...</view>
+</view>

@@ -1,0 +1,3 @@
+<view class="ranking-detail">
+  <list-component rankType="{{rankType}}" bookLists="{{bookLists}}"></list-component>
+</view>

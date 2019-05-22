@@ -1,0 +1,26 @@
+<view class='classify'>
+  <view 
+    class='category-section' 
+    wx:for="{{majorCategory}}" 
+    wx:key="index" 
+    wx:for-index="index"
+    wx:for-item="item"
+  >
+    <view class='category-list'>
+      <text class='category-major'>{{item}}</text>
+      <view 
+        class='category-item' 
+        wx:for="{{classiftyList[index]}}" 
+        wx:key="item" 
+        wx:for-index="idx"
+        wx:for-item="itemName"
+        data-major="{{item}}"
+        data-word="{{itemName.name}}"
+        bindtap="toBookList"
+      >
+        <view class='name'>{{itemName.name}}</view>
+        <view class='count'>{{itemName.bookCount}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<view class="recommend-book-list">
+  <view class='major-type'>
+    <text  
+      wx:for="{{bookType}}" 
+      wx:for-item="typeItem"
+      wx:for-index="typeIndex"
+      wx:key="typeIndex" 
+      class='type-item {{selected==typeIndex?"selected":""}}'
+      data-index="{{typeIndex}}"
+      bindtap='selectType'
+  >
+    {{typeItem.type}}
+  </text>
+  </view>
+  <view class='list-box'>
+    <view 
+      wx:for="{{bookLists}}" 
+      wx:for-item="bookItem"
+      wx:for-index="bookIndex"
+      wx:key="bookIndex" 
+      class='list-item'
+      data-id="{{bookItem._id}}"
+      bindtap='toRecommendBookListDetail'
+    >
+      <image class='cover' src="{{'http://statics.zhuishushenqi.com'+bookItem.cover}}"></image>
+      <view class='info'>
+        <text class='title'>{{bookItem.title}}</text>
+        <text class='author'>{{bookItem.author}}</text>
+        <text class='desc'>{{bookItem.desc}}</text>
+        <text class='other'>共{{bookItem.bookCount}}本书 | {{bookItem.collectorCount}}人收藏</text>
+      </view>
+    </view>
+  </view>
+  <view class='loading' wx:if="{{loading}}">加载中...</view>
+</view>

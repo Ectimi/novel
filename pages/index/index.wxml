@@ -1,0 +1,101 @@
+<view class="index">
+  <view class='search'>
+    <input 
+      class='search-box' 
+      bindtap='showSearch' 
+      type='text' 
+      placeholder='请输入搜索内容' 
+      confirm-type='search'
+      bindinput='inputCompletion'
+      bindconfirm='search'
+      value='{{inputValue}}'
+    >
+    </input>
+    <view class='search-btn' bindtap='search'>搜索</view>
+  </view>
+  <view wx:if="{{inputTips.length>0}}" class='tips-box'>
+    <text 
+      class='tip-item'
+      wx:for="{{inputTips}}"
+      wx:for-item="tipItem"
+      wx:for-index="tipIndex"
+      wx:key="tipIndex"
+      data-keyword="{{tipItem}}"
+      bindtap='search'
+    >
+      {{tipItem}}
+    </text>
+  </view>
+  <view wx:if="{{isSearch}}" class='search-recommend'>
+    <view class='close-btn' bindtap='hideSearch'>取消</view>
+    <view class='layer'>
+      <text class='title hot-text'>搜索热词</text>
+      <view class='change' data-type='hot' bindtap='change'>换一批</view>
+      <view class='word-list'>
+        <text 
+          class='word-item' 
+          wx:for="{{showHotWord}}" 
+          wx:for-item="val" 
+          wx:for-index="ind" 
+          wx:key="ind"
+          data-keyword="{{val.word}}"
+          bindtap='search'
+        >
+          {{val.word}}
+        </text>
+      </view>
+    </view>
+    <view class='layer'>
+        <text class='title hot-text'>热门推荐</text>
+        <view class='change' data-type='recommend' bindtap='change'>换一批</view>
+        <view class='word-list'>
+        <text 
+          class='word-item' 
+          wx:for="{{showRecommendWord}}" 
+          wx:for-item="recVal" 
+          wx:for-index="recInd" 
+          wx:key="recInd"
+          data-keyword="{{recVal.word}}"
+          bindtap='search'
+        >
+          {{recVal.word}}
+        </text>
+      </view>
+    </view>
+  </view>
+  <swiper 
+    class='banner-container'
+    indicator-dots="{{indicatorDots}}"
+    indicator-color="{{indicatorColor}}"
+    indicator-active-color="{{indicatorActiveColor}}"
+    autoplay="{{autoplay}}"
+    current="{{current}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    circular="{{circular}}"
+  >
+    <block wx:for="{{bannerImageList}}" wx:key="{{index}}">
+      <swiper-item class="banner-item">
+        <image class='img' src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='mb'>
+    <view class='bookshelf'>
+      <text class='iconfont icon-jiaoshi_shujia icon'></text>
+      <text>书架</text>
+    </view>
+    <view class='booklist' bindtap='toRecommentBookList'>
+      <text class='iconfont icon-shudan icon'></text>
+      <text>书单</text>
+    </view>
+    <view class='comic'>
+      <text class='iconfont icon-manhua icon'></text>
+      <text>漫画</text>
+    </view>
+    <view class='mine'>
+      <text class='iconfont icon-wode icon'></text>
+      <text>我的</text>
+    </view>
+  </view>
+</view>
